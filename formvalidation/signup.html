@@ -1,0 +1,80 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Form Validation</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="/formvalidation/style.css" />
+	</head>
+	<body>
+		<div class="container">
+			<div class="main">
+				<div class="heading">
+					<h2>Create your account</h2>
+					<p>Search and see new friends around the world!</p>
+				</div>
+				<form action="" class="form">
+					<div class="form-item">
+						<label for="name"> UserName</label>
+						<input  
+                        
+							name="userName"
+							class="input"
+							type="text"
+							placeholder="Enter your UserName"
+						/>
+					</div>
+					<div class="form-item">
+						<label for="email"> Email Address</label>
+						<input
+                       
+							name="email"
+							class="input"
+							type="email"
+							placeholder="Enter your full email"
+						/>
+					</div>
+					<div class="form-item">
+						<label for="phone"> Phone Number</label>
+						<input
+							name="phone"
+							class="input"
+							type="tel"
+							placeholder="Enter your phone Number"
+						/>
+					</div>
+					<div class="form-item">
+						<label for="password"> Enter your password</label>
+						<input
+							name="password"
+							class="input"
+							type="password"
+							placeholder="Enter your password"
+						/>
+					</div>
+					<div class="form-item">
+						<label for="password"> Confrim Password</label>
+						<input
+							name="cfpassword"
+							class="input"
+							type="password"
+							placeholder="Confrim Your password"
+						/>
+					</div>
+					<div>
+						<button class="btn">Create Account</button>
+					</div>
+				</form>
+			</div>
+		</div>
+		<script src="/formvalidation/script.js"></script>
+	</body>
+</html>
