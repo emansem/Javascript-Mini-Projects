@@ -1,0 +1,130 @@
+/** @format */
+
+* {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: "Inter", sans-serif;
+}
+
+.container {
+	max-width: 100%;
+	margin: 2rem 0;
+
+	display: flex;
+	justify-content: center;
+}
+
+.header {
+	background-color: #032133;
+	display: flex;
+	justify-content: space-evenly;
+	color: #e7f1f6;
+	padding: 12px 0px;
+	font-size: 18px;
+	font-weight: 500;
+}
+
+.main {
+	background-color: #ffffff;
+	box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+	width: 550px;
+	padding: 2rem;
+	border-radius: 0.4rem;
+	margin-top: 4rem;
+}
+.heading {
+	font-size: 2rem;
+	margin-block: 1rem;
+	color: #032133;
+}
+.searchbox {
+	width: 100%;
+	border: 0px solid #eaeaea;
+	box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+	background-color: #f9f9f9;
+	margin-block: 1rem;
+	padding: 1rem;
+
+	border-radius: 0.4rem;
+}
+.form {
+	display: flex;
+	justify-content: space-between;
+	
+}
+.input {
+	flex-basis: 70%;
+	height: 45px;
+	padding: 0.4rem 1rem;
+	border-radius: 0.8rem;
+	border: 0;
+	font-size: 16px;
+	color: #666;
+	box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+	outline: none;
+}
+.btn {
+	background-color: #032133;
+	font-size: 16px;
+	border: none;
+	outline: none;
+	padding: 0.5rem 0.8rem;
+	margin-left: 1.2rem;
+	color: #f9f9f9;
+	font-weight: 600;
+	cursor: pointer;
+	border-radius: 1.2rem;
+}
+.todoitem {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 0.8rem;
+
+	border-radius: 10px;
+	box-shadow: 0 5px 40px rgba(0, 0, 0, 0.07);
+	border: 1px solid;
+	border-color: #e4dfe9;
+
+	padding: 15px;
+
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+.deleteBtn{
+    background-color: rgba(186, 20, 20, 0.931);
+    padding: 0.2rem 0.6rem;
+    border-radius: 12px;
+    color: #e4dfe9;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        background-color: #032133;
+    }
+    .container{
+        padding: 0rem 1rem;
+        overflow: hidden;
+    }
+    .input{
+       width: 100%;
+       padding: 0.8rem 0.6rem;
+    }
+    .form{
+        display: flex;
+        flex-direction: column;
+        gap: 0.8rem;
+     
+    }
+    .main{
+        overflow: hidden;
+    }
+    .btn{
+       width: 200px;
+    }
+  }
