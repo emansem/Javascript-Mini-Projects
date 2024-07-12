@@ -28,6 +28,12 @@ header {
 .showmore{
     display: none;
 }
+
+.active{
+    background-color: #ffd700;
+    color: #1e1e1e;
+    
+}
 .search-form input {
     padding: 10px;
     font-size: 16px;
@@ -44,6 +50,16 @@ header {
     display: none;
     display: flex;
     gap: 1rem;
+    align-items: center;
+}
+li{
+    background-color: #333;
+    padding: 0.6rem  1rem;
+    text-align: center;
+    list-style: none;
+    border-radius: 0.4rem;
+    font-size: 16px;
+    cursor: pointer;
 }
 
 .search-form button,

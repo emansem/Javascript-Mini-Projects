@@ -153,14 +153,37 @@ function dispplaySearchMovies(result) {
 }
 
 function paginationDisplay(result, page, total) {
-	pagination.innerHTML = "";
-	if (result.length >= 20) {
-		pagination.style.display = "block";
-	}
-	const prev = document.createElement("button");
-	prev.innerHTML = "Prev";
-	prev.disabled = page === 1;
+	// pagination.innerHTML = "";
+	// // if (result.length >= 20) {
+	// // 	pagination.style.display = "block";
+	// // }
+	let pages = "";
+	let pageNum;
+	for (let i = 1; i < total; i++) {
+		pageNum = i;
 
+		pages += ` <li class="list">${pageNum}</li>`;
+	}
+	pagination.innerHTML = ` <button class="prev">Prev</button>
+            ${pages}
+            <button class="next">Next</button>`;
+
+	const lists = document.querySelectorAll(".list");
+	lists.forEach((list) => {
+		list.addEventListener("click", function (e) {
+			e.preventDefault();
+
+			const pageNumber = Number(e.target.textContent);
+
+			searchMovies(pageNumber);
+
+			list.classList.add("active");
+		});
+	});
+
+	const prev = document.querySelector(".prev");
+
+	prev.disabled = page === 1;
 
 	prev.addEventListener("click", function (e) {
 		if (currentpage > 1) {
@@ -168,21 +191,18 @@ function paginationDisplay(result, page, total) {
 			searchMovies(currentpage);
 		}
 	});
-	const next = document.createElement("button");
-	next.innerHTML = "next";
+	const next = document.querySelector(".next");
 	next.disabled = page === total;
-	
+
 	next.addEventListener("click", function (e) {
 		if (currentpage < total) {
 			currentpage++;
 			searchMovies(currentpage);
 		}
 	});
-	pagination.appendChild(prev);
-	pagination.appendChild(next);
 
 	console.log(result, page, total);
-}
+};
 
 switch (pageSeach) {
 	case "/movies/":
