@@ -1,0 +1,136 @@
+body {
+    background-color: #121212;
+    color: #ffffff;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+    color: #ffd700;
+}
+header {
+    background-color: #1e1e1e;
+    padding: 20px;
+    text-align: center;
+}
+
+.banner {
+    background: url('images/banner-image.jpg') no-repeat center center/cover;
+    padding: 60px 20px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.search-form {
+    margin-top: 20px;
+}
+.showmore{
+    display: none;
+}
+.search-form input {
+    padding: 10px;
+    font-size: 16px;
+    width: 200px;
+    border-radius: 5px;
+    border: 1px solid #ffd700;
+    background-color: #333;
+    color: #fff;
+}
+.genre{
+    color: #ffd700;
+}
+.pagination{
+    display: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.search-form button,
+button 
+
+{
+    padding: 10px;
+    font-size: 16px;
+    background-color: #ffd700;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.search-form input:focus,
+.search-form button:focus {
+    outline: none;
+}
+
+.movie-list {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.movie-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.movie-card {
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.movie-card:hover {
+    transform: scale(1.05);
+}
+
+.movie-card a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.movie-poster img {
+    width: 100%;
+   height: 300px;
+   object-fit: cover;
+}
+
+.movie-info {
+    padding: 10px;
+}
+
+.movie-details {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.movie-details .movie-poster img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+}
+
+.movie-details .movie-info {
+    max-width: 600px;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .movie-details {
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .movie-details .movie-info {
+        text-align: left;
+    }
+}
