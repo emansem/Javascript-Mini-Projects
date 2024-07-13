@@ -170,14 +170,18 @@ function paginationDisplay(result, page, total) {
 
 	const lists = document.querySelectorAll(".list");
 	lists.forEach((list) => {
+		let currentVALUE = 0;
 		list.addEventListener("click", function (e) {
 			e.preventDefault();
+
+			const targetEl = e.target;
+			console.log(targetEl);
 
 			const pageNumber = Number(e.target.textContent);
 
 			searchMovies(pageNumber);
-
-			list.classList.add("active");
+		
+			currentVALUE = e.target.value;
 		});
 	});
 
@@ -202,7 +206,7 @@ function paginationDisplay(result, page, total) {
 	});
 
 	console.log(result, page, total);
-};
+}
 
 switch (pageSeach) {
 	case "/movies/":

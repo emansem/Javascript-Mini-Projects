@@ -1,0 +1,40 @@
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container{
+    width: 1200px;
+    margin: 100px auto;
+    display: flex;
+    align-items: center;
+}
+img{
+    height: 300px;
+    width: 300px;
+    object-fit: cover;
+}
+.slide{
+    transition: all 0.6s ease-in-out;
+   scroll-behavior: smooth;
+}
+.sliders{
+    width: 900px;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    gap: 0.8rem;
+    overflow: hidden;
+    cursor: pointer;
+   
+    transition: all 0.4s ease-in-out
+   
+}
+
+.btn{
+    background-color: black;
+  
+    padding: 0.8rem 1rem;
+    color: white;
+    cursor: pointer;
+}
