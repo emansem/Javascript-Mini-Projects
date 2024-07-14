@@ -356,3 +356,11 @@ footer{
     letter-spacing: 0.6px;
     font-family: var(--body-fonts);
 }
+#job-wrapper{
+    width: 100%;
+}
+.job-details{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+}
